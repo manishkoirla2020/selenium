@@ -1,5 +1,6 @@
 package seleniumTest;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -32,7 +33,14 @@ public class practice {
 		driver.findElement(By.xpath("//a[text()='Friends']")).click();
 		
 		//driver.findElement(By.xpath("//*[@id=\"mount_0_0\"]/div/div[1]/div[1]/div[2]/div[4]/div[1]/span/div/div[1]/i")).click();
-		
+	     
+		List<WebElement> links = driver.findElements(By.xpath("//div[@class='buofh1pr hv4rvrfc']/div/a/));
+	    System.out.println("Total Friends -->"+ links.size();
+	    
+	   for (WebElement e: links) {
+	    	System.out.println(e.getText());
+	    	///how are you
+	   }
 	}
 
 }
